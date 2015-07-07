@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/timoweave/alpha/issues"
   },
-  "homepage": "https://github.com/timoweave/alpha"
+  "homepage": "https://github.com/timoweave/alpha",
+  "dependencies": {
+    "express": "^4.13.1",
+    "mocha": "^2.2.5"
+  }
 }
