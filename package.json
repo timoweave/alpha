@@ -1,0 +1,19 @@
+{
+  "name": "algo",
+  "version": "0.0.1",
+  "description": "coding dojo projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timoweave/alpha.git"
+  },
+  "author": "Timothy Shiu",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/timoweave/alpha/issues"
+  },
+  "homepage": "https://github.com/timoweave/alpha"
+}
