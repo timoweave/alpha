@@ -18,6 +18,7 @@
   "homepage": "https://github.com/timoweave/alpha",
   "dependencies": {
     "express": "^4.13.1",
+    "jade": "^1.11.0",
     "mocha": "^2.2.5"
   }
 }

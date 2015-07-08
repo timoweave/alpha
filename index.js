@@ -1,9 +1,12 @@
 var express = require("express");
 var app = express();
+var color = require("./lib/color.js");
+
+app.set("view engine", "jade");
 
 app.get("/", function(req, res) {
 	console.log("req '/'");
-	res.send("Hello world!");
+	res.render("index", {"color" : color.get_color()});
     });
 
 var server = app.listen(3000, function() {
