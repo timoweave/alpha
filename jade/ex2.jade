@@ -1,0 +1,27 @@
+doctype html5
+
+html(lang="en")
+  head
+    title "jade doc type"
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0")
+    meta(name="description", content="A description of this page")
+    link(href="css/style.css", rel="stylesheet", type="text/css")
+  body
+    // plain html, 2 items       
+    <p> hello there</p>
+    <ol>
+    <li>hello</li>
+    <li>how are you</li>
+    </ol>
+    // all items
+    ol
+      - var items = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis"]
+      - each item in items
+        li= item
+    // first 3 items
+    ol 
+      - var items = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis"]
+      - for (var i = 0; i < 3; i++) 
+        li= items[i] 

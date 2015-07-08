@@ -1,0 +1,52 @@
+doctype html
+// - basic tag example
+html(lang="en")
+  head
+    title=pageTitle
+    script(type="text/javascript").
+      if (foo) { 
+        bar(1 + 5);
+      }
+  body
+    h1 Jade - node template engine
+    // - basic tag
+    div
+    a
+    span
+    nav
+    // - self closing tags
+    img
+    br 
+    hr
+
+    // - nesting exmaple
+    ul
+      li one
+      li two
+      li three
+
+    //  - table 
+    table
+      tr
+        th one
+        th two
+        th three
+      tr
+        td 1.0
+        td 2.0
+        td 3.0
+      tr
+        td 1.1
+        td 2.1
+        td 3.1
+      tr
+        td 1.2
+        td 2.2
+        td 3.2
+
+    #container.col
+      if youAreUsingJade
+        p You are amazing
+      else
+        p Get on it!
+      p Jade is a terse and simple templating language with a strong focus on performance and powerful feature.
