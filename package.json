@@ -1,10 +1,14 @@
 {
   "name": "algo",
   "version": "0.0.1",
-  "description": "coding dojo projects",
+  "description": "coding dojo coding exercises",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "node_modules/.bin/mocha --recursive tests",
+    "coverage": "istanbul cover node_modules/.bin/mocha -- -R dot"
+  },
+  "bin": {
+    "jade": ""
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,7 @@
   },
   "homepage": "https://github.com/timoweave/alpha",
   "dependencies": {
+    "chai": "^3.0.0",
     "express": "^4.13.1",
     "jade": "^1.11.0",
     "mocha": "^2.2.5"
