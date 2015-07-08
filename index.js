@@ -11,10 +11,12 @@ app.get("/", function(req, res) {
                              "title" : "COLOR TEST WITH MOCHA & JADE"});
     });
 
+/*
 app.get("/algorithms", function(req, res) {
 	console.log("req '/algorithms'");
 	res.render("algorithms", {"color" : color.get_color()});
     });
+*/
 
 var server = app.listen(3000, function() {
 	var address = server.address();
