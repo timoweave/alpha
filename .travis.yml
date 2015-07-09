@@ -4,3 +4,9 @@ node_js:
   - "0.11"
   - "0.10"
 sudo: required
+notifications:
+  email:
+    recipients:
+      - timoweave@gmail.com
+    on_sucess: always
+    on_failure: always
