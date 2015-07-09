@@ -106,3 +106,35 @@ describe("10. eliminate negative values", function() {
 		assert.deepEqual(numbers.eliminate_negative_items([-3, 0, 7]), [0, 0, 7]);
         });
 });
+
+describe("11. find max, min, and average", function() {
+	it("should find 100, 0, 50", function(){
+		assert.deepEqual(numbers.get_min_avg_max([0, 100]), {"min":0, "avg": 50, "max":100});
+		assert.deepEqual(numbers.get_min_avg_max([0, 1, 2]), {"min":0, "avg": 1, "max":2});
+		assert.deepEqual(numbers.get_min_avg_max([0, 1, -4]), {"min":-4, "avg": -1, "max":1});
+	});
+    });
+
+describe("12. shift values by one (left-shift)", function() {
+	it("should have last element as zero", function(){
+		assert.deepEqual(numbers.shift_one_left([0, 100]), [100, 0]);
+		assert.deepEqual(numbers.shift_one_left([0, 1, 2]), [1, 2, 0]);
+		assert.deepEqual(numbers.shift_one_left([0, 1, -4]), [1, -4, 0]);
+	});
+    });
+
+describe("13. convert negative number to string 'dojo'", function() {
+	it("should have throw error for non-array input", function(){
+		assert.throws(function() {
+			var a = numbers.replace_neg_with_dojo(0);
+		    });
+		assert.throws(function() {
+			var a = numbers.replace_neg_with_dojo("hello");
+		    });
+	});
+	it("should have 'dojo' printed", function(){
+		assert.deepEqual(numbers.replace_neg_with_dojo([0, 100]), [0, 100]);
+		assert.deepEqual(numbers.replace_neg_with_dojo([0, 1, 2]), [0, 1, 2]);
+		assert.deepEqual(numbers.replace_neg_with_dojo([-10, 1, -4]), ["dojo", 1, "dojo"]);
+	});
+    });
