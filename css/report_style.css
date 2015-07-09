@@ -1,12 +1,12 @@
 
-.reveal dt.accomplish {
+.reveal dt.green {
    color: darkolivegreen;
 }
 
-.reveal .challenges {
+.reveal .orange {
    color: darkorange;
 }
 
-.reveal .help {
+.reveal .cyan {
    color: darkcyan;
 }

@@ -4,7 +4,7 @@
   "description": "coding dojo coding exercises",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha --recursive tests",
+    "test": "node_modules/.bin/mocha --ui bdd --recursive tests",
     "browser_test": "node_modules/.bin/browserify tests/numbers.js -o browser_tests/numbers.js",
     "jade_html": "node_modules/.bin/jade jade -o html",
     "coverage": "istanbul cover node_modules/.bin/mocha -- -R dot"
@@ -20,14 +20,22 @@
   },
   "homepage": "https://github.com/timoweave/alpha",
   "dependencies": {
-    "express": "^4.13.1",
-    "jade": "^1.11.0"
+    "express": "^4.13.1"
   },
   "devDependencies": {
+    "jade": "^1.11.0",
     "browserify": "^10.2.4",
     "chai": "^3.0.0",
     "mocha": "^2.2.5",
     "tape": "^4.0.0",
     "testling": "^1.7.1"
+  },
+  "testling": {
+    "harness" : "mocha-bdd",
+    "files" : "tests/*.js",
+    "browsers" : [
+      "chrome/latest",
+      "safari/latest"
+    ]
   }
 }
