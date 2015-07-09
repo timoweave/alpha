@@ -1,15 +1,16 @@
 var numbers = require("../lib/numbers");
-var assert = require("assert");
+var assert = require("chai").assert;
+var expect = require("chai").expect;
 
 describe("1. all linear 0-255", function() {
 	it ("should return 0-255, 256th entries, begin w/ 0, end w/ 255, linearly", function() {
 		var all_0_255 = numbers.all_number(0, 256);
 		// 0, 1, 2, 3, 4, 5, ..., 255
 		assert(Array.isArray(all_0_255));
-		assert.equal(all_0_255.length, 256);
-		assert.equal(all_0_255[0], 0);
-		assert.equal(all_0_255[11], 11);
-		assert.equal(all_0_255[255], 255);
+		expect(all_0_255.length).to.equal(256);
+		expect(all_0_255[0]).to.equal(0);
+		expect(all_0_255[11]).to.equal(11);
+		expect(all_0_255[255]).to.equal(255);
 	    });
 });
 
@@ -17,15 +18,15 @@ describe("2. all odd between 0-255", function() {
 	it ("should return odd number between 0-255, 128th entries, begin w/ 1, end w/ 255, linearly", function() {
 		var odd_0_255 = numbers.all_odd_number(0, 256);
 		assert(Array.isArray(odd_0_255));
-		assert.equal(odd_0_255.length, 128);
-		assert.equal(odd_0_255[0], 1);
-		assert.equal(odd_0_255[1], 3);
-		assert.equal(odd_0_255[2], 5);
-		assert.equal(odd_0_255[3], 7); 
+		expect(odd_0_255.length).to.equal(128);
+		expect(odd_0_255[0]).to.equal(1);
+		expect(odd_0_255[1]).to.equal(3);
+		expect(odd_0_255[2]).to.equal(5);
+		expect(odd_0_255[3]).to.equal(7); 
 		// 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31,
-		assert.equal(odd_0_255[11], 23);
-		assert.equal(odd_0_255[15], 31);
-		assert.equal(odd_0_255[127], 255);
+		expect(odd_0_255[11]).to.equal(23);
+		expect(odd_0_255[15]).to.equal(31);
+		expect(odd_0_255[127]).to.equal(255);
 	    });
 });
 
@@ -35,8 +36,8 @@ describe("3. all between 0-255, and accumulated sum", function() {
 		var sum_0_255 = numbers.all_number_and_accumulated_sum(0, 256);
 		// num: 0, 1, 2, 3,  4,  5, 6,   7, 8,   9, 10, ..., 255
 		// sum: 0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...,
-		assert(Array.isArray(sum_0_255));
-		assert.equal(sum_0_255.length, 256);
+		expect(sum_0_255).to.be.a('array');
+		expect(sum_0_255).to.have.length(256);
 		assert.deepEqual(sum_0_255[0], {"num": 0, "sum": 0});
 		assert.deepEqual(sum_0_255[1], {"num": 1, "sum": 1});
 		assert.deepEqual(sum_0_255[2], {"num": 2, "sum": 3});

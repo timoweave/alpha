@@ -1,0 +1,72 @@
+doctype html
+
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="description", content="status reports...")
+    meta(name="author", content="Pun Shiu")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=no")
+
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+
+    link(rel="stylesheet", href="../reveal.js/css/reveal.css")
+    link(rel="stylesheet", href="../reveal.js/css/theme/black.css", id="theme")
+    link(rel="stylesheet", href="../reveal.js/lib/css/zenburn.css")
+    link(rel="stylesheet", href="../css/report_style.css")
+
+    title="Status Report, Coding Dojo"
+    
+  body: .reveal.slide: .slides
+    section
+      h3 D3, July 8, 2015, Wed
+      dl 
+        dt.accomplish accomplish
+          dd - finish remaining 13 algorithm challenges
+          dd - add reveal.js git submodule for report slides
+          dd - add chai expect, instead of default assert
+          dd - add travis, w/ notifications, and mocha browserify 
+          dd - add 
+             a(href="../browser_tests/index.html") browserify/mocha
+          dd - add 
+             a(href="https://github.com/timoweave/alpha") https://github.com/timoweave/alpha
+          dd - add 
+             a(href="https://travis-ci.org/timoweave/alpha") https://travis-ci.org/timoweave/alpha
+        dt.challenges challenges
+          dd - add travis, browserify, testling
+        dt.help help
+          dd - a bit more about various production quality testing
+    section
+      h3 D2, July 7, 2015, Tue
+      dl
+        dt.accomplish accomplish
+          dd - add github, mocha
+          dd - add some of 13 algorithm problems
+        dt.challenges challenges
+          dd - web/unit testing, mocha/chai
+        dt.help help
+          dd - functional testing
+          dd - web/local performance profiling
+          dd - searching for project components (midi, blog, payment, social)
+    section
+      h3 D1, July 6, 2015, Mon
+      dl
+        dt.accomplish accomplish
+          dd - went over orientation, schedules, mon/thur 6pm, flex
+          dd - disccus app projects: 
+            ol 
+              li travis-add-on (open source file on the webpage)
+              li play-bar-list (play music notes, rythmn)
+              li cookisan (making artisan bread details, brag)
+              li lindy-hop (dance instructor app, blog, payment)
+        dt.challenges challenges
+          dd - do 13 algorithms exercises
+        dt.help help
+          dd - 
+
+    script(type="text/javascript", src="../reveal.js/lib/js/head.min.js")
+    script(type="text/javascript", src="../reveal.js/js/reveal.js")
+    script(type="text/javascript", src="../reveal.js/plugin/zoom-js/zoom.js")
+    script(type="text/javascript", src="../reveal.js/plugin/notes/notes.js")
+    script(type="text/javascript", src="../lib/reveal_init.js")
+    
