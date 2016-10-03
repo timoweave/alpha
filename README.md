@@ -10,5 +10,5 @@ Instructor:
 Courses:
 - http://courses.codingdojo.com
 
-NOTE: whatever that is, just some changes 123456, ABCDEF
+NOTE: whatever that is, just some changes 123456, ABCDEF, XYZ
 
